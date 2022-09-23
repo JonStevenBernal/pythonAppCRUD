@@ -71,8 +71,8 @@ def delete_user(id):
     print(user)
 
     conn.commit()
-    conn.close()
     cur.close()
+    conn.close()
 
     if user is None:
         return jsonify({'Message': 'User not found'}), 404
